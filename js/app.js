@@ -8,7 +8,22 @@
 
 //elastic, inOut (ANIM)
 
-// gsap.to(".green", { x: 600, duration: 2, easy: "bCK" });
+// gsap.to(".green", { x: 600, duration: 2, easy: "back" });
 
 // gsap.to(".pink", { x: 600, duration: 2, easy: "linear" });
+
+//stagger-відповідає за затримку анімації між елементами в одному контейнері
+
+// gsap.to("#freds img", { y: -100, stagger: 0.5 });
+
+gsap.to("#freds img", {
+  y: -100, stagger: {
+    //кожна запускається через 0.3
+    each: 0.3,
+    //вся анімація має відбутися за 1 секунду
+    // amount: 1,
+    //вказує на те, звідки починати анімацію (start, center, end,  edges)
+    from: "end"
+  }
+});
 
