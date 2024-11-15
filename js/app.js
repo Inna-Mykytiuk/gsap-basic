@@ -30,14 +30,34 @@
 //Tween control
 //play, pause, reverse, restart
 
-const tween = gsap.to(".green", {
-  x: 600,
-  duration: 3,
-  ease: "linear",
-  paused: true,
-});
+// const tween = gsap.to(".green", {
+//   x: 600,
+//   duration: 3,
+//   ease: "linear",
+//   paused: true,
+// });
 
-document.getElementById("play").onclick = () => tween.play();
-document.getElementById("pause").onclick = () => tween.pause();
-document.getElementById("reverse").onclick = () => tween.reverse();
-document.getElementById("restart").onclick = () => tween.restart();
+// document.getElementById("play").onclick = () => tween.play();
+// document.getElementById("pause").onclick = () => tween.pause();
+// document.getElementById("reverse").onclick = () => tween.reverse();
+// document.getElementById("restart").onclick = () => tween.restart();
+
+//Circle button
+const button = document.querySelector(".button");
+const bg = document.querySelector(".bg");
+
+//rollover the hover circle quickly
+//notice the inner circle stops working properly
+//try to fix it in the code below!
+
+const tweenHover = gsap.fromTo(
+  bg,
+  { scale: 0, duration: 1 },
+  { scale: 1, ease: "circ" }
+);
+
+button.addEventListener("mouseenter", function () {
+  // gsap.fromTo(bg, { scale: 0, duration: 1 }, { scale: 1, ease: "circ" });
+
+  tweenHover.restart();
+});
