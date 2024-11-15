@@ -1,6 +1,6 @@
 body {
   color: white;
-  font-family: 'Kanit', sans-serif;
+  font-family: "Kanit", sans-serif;
   background: #0a5b90;
   display: flex;
   justify-content: center;
@@ -15,7 +15,6 @@ body {
   height: 410px;
   border: 1px solid #333;
   background: url(../images/space-background.png);
-
 }
 
 #title {
@@ -38,4 +37,12 @@ body {
   position: absolute;
   top: 25px;
   right: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
 }

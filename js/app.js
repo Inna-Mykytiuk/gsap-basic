@@ -16,14 +16,28 @@
 
 // gsap.to("#freds img", { y: -100, stagger: 0.5 });
 
-gsap.to("#freds img", {
-  y: -100, stagger: {
-    //кожна запускається через 0.3
-    each: 0.3,
-    //вся анімація має відбутися за 1 секунду
-    // amount: 1,
-    //вказує на те, звідки починати анімацію (start, center, end,  edges)
-    from: "end"
-  }
+// gsap.to("#freds img", {
+//   y: -100, stagger: {
+//     //кожна запускається через 0.3
+//     each: 0.3,
+//     //вся анімація має відбутися за 1 секунду
+//     // amount: 1,
+//     //вказує на те, звідки починати анімацію (start, center, end,  edges)
+//     from: "end"
+//   }
+// });
+
+//Tween control
+//play, pause, reverse, restart
+
+const tween = gsap.to(".green", {
+  x: 600,
+  duration: 3,
+  ease: "linear",
+  paused: true,
 });
 
+document.getElementById("play").onclick = () => tween.play();
+document.getElementById("pause").onclick = () => tween.pause();
+document.getElementById("reverse").onclick = () => tween.reverse();
+document.getElementById("restart").onclick = () => tween.restart();
