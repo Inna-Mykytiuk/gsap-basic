@@ -65,7 +65,31 @@
 
 //Timelines
 
-gsap.from("#demo", { duration: 1, opacity: 0 });
-gsap.from("#title", { duration: 1, delay: 1, opacity: 0, scale: 0 });
-gsap.from("#freds ing", { duration: 0.5, delay: 2, opacity: 0, scale: 0, stagger: 0.5 });
-gsap.from("#time", { duration: 1, delay: 5, opacity: 0, xPercent: 100 });
+//1
+
+// gsap.from("#demo", { duration: 1, opacity: 0 });
+// gsap.from("#title", { duration: 1, delay: 1, opacity: 0, scale: 0 });
+// gsap.from("#freds ing", { duration: 0.5, delay: 2, opacity: 0, scale: 0, stagger: 0.5 });
+// gsap.from("#time", { duration: 1, delay: 5, opacity: 0, xPercent: 100 });
+
+
+//2
+
+// gsap.timeline()
+//   .from("#demo", { autoAlpha: 0 })
+//   .from("#title", { opacity: 0, scale: 0, ease: "back" })
+//   .from("#freds img", { y: 160, stagger: 0.1, duration: 0.8, ease: "back" })
+//   .from("#time", { xPercent: 100, duration: 0.2 })
+
+//3
+
+const animation = gsap.timeline()
+  .from("#demo", { autoAlpha: 0 })
+  .from("#title", { opacity: 0, scale: 0, ease: "back" })
+  .from("#freds img", { y: 160, stagger: 0.1, duration: 0.8, ease: "back" })
+  .from("#time", { xPercent: 100, duration: 0.2 })
+
+document.getElementById("play").onclick = () => animation.play();
+document.getElementById("pause").onclick = () => animation.pause();
+document.getElementById("reverse").onclick = () => animation.reverse();
+document.getElementById("restart").onclick = () => animation.restart();
