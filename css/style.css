@@ -21,6 +21,7 @@ body {
   position: absolute;
   top: 120px;
   left: 40px;
+
 }
 
 #freds {
@@ -37,6 +38,8 @@ body {
   position: absolute;
   top: 25px;
   right: 0;
+  padding: 10px;
+  background-color: #1f81d0;
 }
 
 .container {

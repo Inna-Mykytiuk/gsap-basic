@@ -43,21 +43,29 @@
 // document.getElementById("restart").onclick = () => tween.restart();
 
 //Circle button
-const button = document.querySelector(".button");
-const bg = document.querySelector(".bg");
+// const button = document.querySelector(".button");
+// const bg = document.querySelector(".bg");
 
-//rollover the hover circle quickly
-//notice the inner circle stops working properly
-//try to fix it in the code below!
+// //rollover the hover circle quickly
+// //notice the inner circle stops working properly
+// //try to fix it in the code below!
 
-const tweenHover = gsap.fromTo(
-  bg,
-  { scale: 0, duration: 1 },
-  { scale: 1, ease: "circ" }
-);
+// const tweenHover = gsap.fromTo(
+//   bg,
+//   { scale: 0, duration: 1 },
+//   { scale: 1, ease: "circ" }
+// );
 
-button.addEventListener("mouseenter", function () {
-  // gsap.fromTo(bg, { scale: 0, duration: 1 }, { scale: 1, ease: "circ" });
+// button.addEventListener("mouseenter", function () {
+//   // gsap.fromTo(bg, { scale: 0, duration: 1 }, { scale: 1, ease: "circ" });
 
-  tweenHover.restart();
-});
+//   tweenHover.restart();
+// });
+
+
+//Timelines
+
+gsap.from("#demo", { duration: 1, opacity: 0 });
+gsap.from("#title", { duration: 1, delay: 1, opacity: 0, scale: 0 });
+gsap.from("#freds ing", { duration: 0.5, delay: 2, opacity: 0, scale: 0, stagger: 0.5 });
+gsap.from("#time", { duration: 1, delay: 5, opacity: 0, xPercent: 100 });
