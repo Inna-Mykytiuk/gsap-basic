@@ -1,10 +1,19 @@
 body {
-  font-family: 'Kanit', sans-serif;
+  font-family: "Kanit", sans-serif;
   background: #252525;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
 }
 
 #demo {
@@ -52,7 +61,13 @@ body {
   -moz-box-shadow: inset 0px 1px 0px 0px #fbafe3;
   -webkit-box-shadow: inset 0px 1px 0px 0px #fbafe3;
   box-shadow: inset 0px 1px 0px 0px #fbafe3;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ff905c), color-stop(1, #ef027d));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0.05, #ff905c),
+    color-stop(1, #ef027d)
+  );
   background: -moz-linear-gradient(top, #ff905c 5%, #ef027d 100%);
   background: -webkit-linear-gradient(top, #ff905c 5%, #ef027d 100%);
   background: -o-linear-gradient(top, #ff905c 5%, #ef027d 100%);
@@ -76,7 +91,13 @@ body {
 }
 
 .myButton:hover {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ef027d), color-stop(1, #ff905c));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0.05, #ef027d),
+    color-stop(1, #ff905c)
+  );
   background: -moz-linear-gradient(top, #ef027d 5%, #ff905c 100%);
   background: -webkit-linear-gradient(top, #ef027d 5%, #ff905c 100%);
   background: -o-linear-gradient(top, #ef027d 5%, #ff905c 100%);
@@ -86,7 +107,6 @@ body {
 
 .myButton:active {
   position: relative;
-
 }
 
 .container {
@@ -95,4 +115,41 @@ body {
   align-items: center;
   flex-direction: column;
   gap: 50px;
+}
+
+* {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.demo {
+  border: 1px solir grey;
+  width: 400px;
+  height: 400px;
+  background: #d6deff;
+}
+
+.hermanWrapper {
+  width: 100%;
+  height: 300px;
+  /* border: 2px solid red; */
+  overflow: hidden;
+}
+
+.herman {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  bottom: 0;
+  left: 150px;
+}
+
+.hole {
+  position: absolute;
+  width: 150px;
+  height: 20px;
+  border-radius: 50%;
+  background: black;
+  left: 125px;
+  top: 290px;
 }
