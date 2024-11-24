@@ -165,3 +165,25 @@ body {
   background: radial-gradient(rgba(100, 100, 100, 0.6), rgba(0, 0, 0, 0) 75%);
   background-repeat: no-repeat;
 }
+
+.item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.dot {
+  height: 20px;
+  min-width: 20px;
+  background-color: #333;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.itemText {
+  color: #777;
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 4px;
+  font-size: 40px;
+  white-space: nowrap;
+}
