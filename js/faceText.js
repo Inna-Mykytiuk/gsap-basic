@@ -1,11 +1,11 @@
 var tl = gsap.timeline({ repeat: 5 });
-var duration = 2;
+var duration = 1;
 function init() {
   tl.fromTo(
     "h1",
     { scale: 0 },
     { duration: duration, scale: 6, ease: "slow(0.5, 0.8)", stagger: duration }
-  ).from(
+  ).to(
     "h1",
     {
       duration: duration,
